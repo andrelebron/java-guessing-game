@@ -37,7 +37,7 @@ public class GuessingGame extends JFrame {
 		}
 	}
 	public void newGame() {			//Method that determines the random number for the game 
-		theNumber = (int)(Math.random() * 100 + 1);
+		theNumber = (int)(Math.random() * 1000000 + 1);
 	}
 	public GuessingGame() {			//Method that sets up the game's GUI
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,7 +50,7 @@ public class GuessingGame extends JFrame {
 		lblNewLabel.setBounds(10, 38, 414, 19);
 		getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Guess a number between 1 and 100:");	//Settings for the instruction label
+		JLabel lblNewLabel_1 = new JLabel("Guess a number between 1 and 1,000,000:");	//Settings for the instruction label
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_1.setBounds(10, 95, 255, 14);
 		getContentPane().add(lblNewLabel_1);
@@ -61,7 +61,7 @@ public class GuessingGame extends JFrame {
 				checkGuess();
 			}
 		});
-		txtGuess.setBounds(267, 92, 44, 20);
+		txtGuess.setBounds(267, 92, 100, 20);
 		getContentPane().add(txtGuess);
 		txtGuess.setColumns(10);
 		
@@ -74,7 +74,7 @@ public class GuessingGame extends JFrame {
 		btnGuess.setBounds(172, 147, 89, 23);
 		getContentPane().add(btnGuess);
 		
-		lblOutput = new JLabel("Enter a number above and click Guess!");	//Settings for 2nd instruction label
+		lblOutput = new JLabel("Enter a number (without commas) above and click Guess!");	//Settings for 2nd instruction label
 		lblOutput.setFont(new Font("Tahoma", Font.ITALIC, 11));
 		lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOutput.setBounds(10, 208, 414, 14);
